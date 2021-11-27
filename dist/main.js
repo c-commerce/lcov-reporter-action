@@ -86113,7 +86113,7 @@ async function main () {
   const options = {
     repository: context.payload.repository.full_name,
     prefix: `${process.env.GITHUB_WORKSPACE}/`,
-    changedFiles: changedFiles ?? [],
+    changedFiles: changedFiles || [],
     only: core.getInput('only')
   };
 

@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.0...v0.4.1) (2021-11-27)
+
+
+### Bug Fixes
+
+* coalesce simple ([1dd7a5f](https://github.com/c-commerce/lcov-reporter-action/commit/1dd7a5f312b15379aed89720fd39634f47bc9003))
+
 # [0.4.0](https://github.com/c-commerce/lcov-reporter-action/compare/v0.3.0...v0.4.0) (2021-11-27)
 
 
