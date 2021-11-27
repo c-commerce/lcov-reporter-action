@@ -1,15 +1,15 @@
 {
 	"name": "lcov-reporter-action",
-	"version": "0.4.1",
+	"version": "0.4.2",
 	"description": "Comments a pull request with the lcov code coverage",
 	"license": "MIT",
 	"author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
 	"repository": "https://github.com/c-commerce/lcov-reporter-action",
 	"type": "module",
-  "exports": {
-    "import": "./src/index.js",
-    "require": "./dist/main.js"
-  },
+	"exports": {
+		"import": "./src/index.js",
+		"require": "./dist/main.js"
+	},
 	"keywords": [
 		"actions",
 		"pull-request",

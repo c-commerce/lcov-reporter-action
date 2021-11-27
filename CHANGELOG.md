@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.1...v0.4.2) (2021-11-27)
+
+
+### Bug Fixes
+
+* make consumable by node ([69d704e](https://github.com/c-commerce/lcov-reporter-action/commit/69d704ed739bb0c2461a80a0eb3ed928146120ca))
+
 ## [0.4.1](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.0...v0.4.1) (2021-11-27)
 
 
