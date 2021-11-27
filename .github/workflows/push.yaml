@@ -1,0 +1,16 @@
+name: On Push
+on:
+  push:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - run: npm ci
+      - name: Maybe make release
+        run: npm run semantic-release || true
+
