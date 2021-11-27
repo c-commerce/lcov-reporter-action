@@ -85697,7 +85697,7 @@ var __importStar = (commonjsGlobal && commonjsGlobal.__importStar) || function (
     return result;
 };
 Object.defineProperty(github, "__esModule", { value: true });
-github.getOctokit = context = github.context = void 0;
+var getOctokit_1 = github.getOctokit = context = github.context = void 0;
 const Context = __importStar(context$1);
 const utils_1 = utils$2;
 var context = github.context = new Context.Context();
@@ -85710,7 +85710,7 @@ var context = github.context = new Context.Context();
 function getOctokit(token, options) {
     return new utils_1.GitHub(utils_1.getOctokitOptions(token, options));
 }
-github.getOctokit = getOctokit;
+getOctokit_1 = github.getOctokit = getOctokit;
 
 var lib = {exports: {}};
 
@@ -85910,6 +85910,10 @@ function tabulate (lcov, options) {
 
   const folders = {};
   for (const file of lcov) {
+    if (options.only === 'changed' && !options.changedFiles.some((item) => file.file.endsWith(item))) {
+      continue
+    }
+
     const parts = file.file.replace(options.prefix, '').split('/');
     const folder = parts.slice(0, -1).join('/');
     folders[folder] = folders[folder] || [];
@@ -86092,18 +86096,25 @@ async function main () {
     console.log(`No coverage report found at '${baseFile}', ignoring...`);
   }
 
-  const changedFiles = await github.getOctokit(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
-    repo: context.repo.repo,
-    owner: context.repo.owner,
-    pull_number: context.payload.pull_request.number
-  });
+  let changedFiles;
+  try {
+    const { data } = changedFiles = await getOctokit_1(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
+      repo: context.repo.repo,
+      owner: context.repo.owner,
+      pull_number: context.payload.pull_request.number
+    });
+    changedFiles = data.map((item) => (item.filename));
+  } catch (err) {
+    console.error('Error fetching pull request changed files');
+  }
 
   console.log(changedFiles);
 
   const options = {
     repository: context.payload.repository.full_name,
     prefix: `${process.env.GITHUB_WORKSPACE}/`,
-    changed_files: changedFiles
+    changedFiles: changedFiles ?? [],
+    only: core.getInput('only')
   };
 
   if (context.eventName === 'pull_request') {

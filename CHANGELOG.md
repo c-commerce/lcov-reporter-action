@@ -1,3 +1,15 @@
+# [0.4.0](https://github.com/c-commerce/lcov-reporter-action/compare/v0.3.0...v0.4.0) (2021-11-27)
+
+
+### Bug Fixes
+
+* simplify transpiled import ([2b042d2](https://github.com/c-commerce/lcov-reporter-action/commit/2b042d22eddd43affb476b6498e3bc4b02a81ef0))
+
+
+### Features
+
+* filter only changed ([72e1673](https://github.com/c-commerce/lcov-reporter-action/commit/72e1673b3582d9687892a9790eb5b3d715675796))
+
 # [0.3.0](https://github.com/c-commerce/lcov-reporter-action/compare/v0.2.22...v0.3.0) (2021-11-27)
 
 
