@@ -16,7 +16,7 @@
 		"comment",
 		"message"
 	],
-	"main": "index.js",
+	"main": "dist/main.js",
 	"engines": {
 		"node": ">=14"
 	},
