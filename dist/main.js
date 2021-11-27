@@ -86096,9 +86096,11 @@ async function main () {
     console.log(`No coverage report found at '${baseFile}', ignoring...`);
   }
 
+  const octokit = getOctokit_1(token);
+
   let changedFiles;
   try {
-    const { data } = changedFiles = await getOctokit_1(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
+    const { data } = changedFiles = await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
       repo: context.repo.repo,
       owner: context.repo.owner,
       pull_number: context.payload.pull_request.number
@@ -86131,14 +86133,14 @@ async function main () {
   // const body = diff(lcov, baselcov, options)
 
   if (context.eventName === 'pull_request') {
-    await new github.GitHub(token).issues.createComment({
+    await octokit.rest.issues.createComment({
       repo: context.repo.repo,
       owner: context.repo.owner,
       issue_number: context.payload.pull_request.number,
       body: diff(lcov, baselcov, options)
     });
   } else if (context.eventName === 'push') {
-    await new github.GitHub(token).repos.createCommitComment({
+    await octokit.rest.repos.createCommitComment({
       repo: context.repo.repo,
       owner: context.repo.owner,
       commit_sha: options.commit,

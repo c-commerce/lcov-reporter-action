@@ -1,3 +1,12 @@
+## [0.4.4](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.3...v0.4.4) (2021-11-27)
+
+
+### Bug Fixes
+
+* change to correct author ([5307e18](https://github.com/c-commerce/lcov-reporter-action/commit/5307e183b7dc424e3224d1c4417ae427c7494292))
+* ref new actions api correctly ([aa35572](https://github.com/c-commerce/lcov-reporter-action/commit/aa355724e58d29c37ad6a17e13862134dcf8fa80))
+* upgrade module resolution ([66927c4](https://github.com/c-commerce/lcov-reporter-action/commit/66927c4d7f895b77aa3ffa05be0061430679be10))
+
 ## [0.4.3](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.2...v0.4.3) (2021-11-27)
 
 
