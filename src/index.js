@@ -21,18 +21,25 @@ async function main () {
     console.log(`No coverage report found at '${baseFile}', ignoring...`)
   }
 
-  const changedFiles = await getOctokit(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
-    repo: context.repo.repo,
-    owner: context.repo.owner,
-    pull_number: context.payload.pull_request.number
-  })
+  let changedFiles
+  try {
+    const { data } = changedFiles = await getOctokit(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
+      repo: context.repo.repo,
+      owner: context.repo.owner,
+      pull_number: context.payload.pull_request.number
+    })
+    changedFiles = data.map((item) => (item.filename))
+  } catch (err) {
+    console.error('Error fetching pull request changed files')
+  }
 
   console.log(changedFiles)
 
   const options = {
     repository: context.payload.repository.full_name,
     prefix: `${process.env.GITHUB_WORKSPACE}/`,
-    changed_files: changedFiles
+    changedFiles: changedFiles ?? [],
+    only: core.getInput('only')
   }
 
   if (context.eventName === 'pull_request') {

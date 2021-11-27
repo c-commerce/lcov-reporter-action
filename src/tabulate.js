@@ -13,6 +13,10 @@ export function tabulate (lcov, options) {
 
   const folders = {}
   for (const file of lcov) {
+    if (options.only === 'changed' && !options.changedFiles.some((item) => file.file.endsWith(item))) {
+      continue
+    }
+
     const parts = file.file.replace(options.prefix, '').split('/')
     const folder = parts.slice(0, -1).join('/')
     folders[folder] = folders[folder] || []

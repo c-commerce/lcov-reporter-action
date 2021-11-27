@@ -15,6 +15,10 @@ inputs:
   lcov-base:
     description: The location of the lcov file for the base branch
     required: false
+  only:
+    description: Filter files
+    required: false
+    default: 'changed'
 runs:
   using: node12
   main: dist/main.js

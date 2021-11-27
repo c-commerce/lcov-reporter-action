@@ -118,7 +118,11 @@ test('tabulate should generate a correct table', function () {
   const options = {
     repository: 'example/foo',
     commit: '2e15bee6fe0df5003389aa5ec894ec0fea2d874a',
-    prefix: '/files/project/'
+    prefix: '/files/project/',
+    only: undefined,
+    changedFiles: [
+      'index.js'
+    ]
   }
 
   const html = table(
