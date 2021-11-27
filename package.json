@@ -48,6 +48,10 @@
 		"@rollup/plugin-commonjs": "^21.0.1",
 		"@rollup/plugin-json": "^4.1.0",
 		"@rollup/plugin-node-resolve": "^13.0.6",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/exec": "^6.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^8.0.3",
 		"@typescript-eslint/eslint-plugin": "^5.4.0",
 		"@typescript-eslint/parser": "^5.4.0",
 		"babel-jest": "^25.1.0",
@@ -67,11 +71,7 @@
 		"regenerator-runtime": "^0.13.3",
 		"rollup": "^2.60.1",
 		"rollup-plugin-node-externals": "^2.2.0",
-		"semantic-release": "^18.0.0",
-		"@semantic-release/changelog": "^6.0.1",
-		"@semantic-release/exec": "^6.0.2",
-		"@semantic-release/git": "^10.0.1",
-		"@semantic-release/npm": "^8.0.3"
+		"semantic-release": "^18.0.0"
 	},
 	"jest": {
 		"testMatch": [
