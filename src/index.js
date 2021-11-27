@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
 import core from '@actions/core'
-import { GitHub, context } from '@actions/github'
+import actions, { GitHub, context } from '@actions/github'
 
 import { parse } from './lcov'
 import { diff } from './comment'
@@ -21,9 +21,18 @@ async function main () {
     console.log(`No coverage report found at '${baseFile}', ignoring...`)
   }
 
+  const changedFiles = await actions.getOctokit(token).request('GET /repos/{owner}/{repo}/pulls/{pull_number}/files', {
+    repo: context.repo.repo,
+    owner: context.repo.owner,
+    pull_number: context.payload.pull_request.number
+  })
+
+  console.log(changedFiles)
+
   const options = {
     repository: context.payload.repository.full_name,
-    prefix: `${process.env.GITHUB_WORKSPACE}/`
+    prefix: `${process.env.GITHUB_WORKSPACE}/`,
+    changed_files: changedFiles
   }
 
   if (context.eventName === 'pull_request') {
