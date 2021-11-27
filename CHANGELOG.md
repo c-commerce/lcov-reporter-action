@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/c-commerce/lcov-reporter-action/compare/v0.2.22...v0.3.0) (2021-11-27)
+
+
+### Features
+
+* **WIP:** get changed files ([69e6d2a](https://github.com/c-commerce/lcov-reporter-action/commit/69e6d2a2ef63a114c3632b112733de61617a01d3))
+
 ## [0.2.22](https://github.com/c-commerce/lcov-reporter-action/compare/v0.2.21...v0.2.22) (2021-11-27)
 
 
