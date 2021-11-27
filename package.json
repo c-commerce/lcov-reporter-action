@@ -1,6 +1,6 @@
 {
 	"name": "lcov-reporter-action",
-	"version": "0.2.19",
+	"version": "0.2.22",
 	"description": "Comments a pull request with the lcov code coverage",
 	"license": "MIT",
 	"author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
@@ -21,11 +21,11 @@
 		"test": "jest --passWithNoTests --coverage",
 		"local": "babel-node src/cli",
 		"format": "prettier --write src/*.js src/**/*.js",
-    "semantic-release": "semantic-release",
-    "commit": "git-cz",
-    "commitizen": "^4.2.3",
-    "conventional-changelog-cli": "^2.1.1",
-    "validate-commit-msg": "^2.14.0"
+		"semantic-release": "semantic-release",
+		"commit": "git-cz",
+		"commitizen": "^4.2.3",
+		"conventional-changelog-cli": "^2.1.1",
+		"validate-commit-msg": "^2.14.0"
 	},
 	"dependencies": {
 		"@actions/core": "^1.6.0",
@@ -63,11 +63,11 @@
 		"regenerator-runtime": "^0.13.3",
 		"rollup": "^2.60.1",
 		"rollup-plugin-node-externals": "^2.2.0",
-    "semantic-release": "^18.0.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/exec": "^6.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^8.0.3"
+		"semantic-release": "^18.0.0",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/exec": "^6.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^8.0.3"
 	},
 	"jest": {
 		"testMatch": [
@@ -75,67 +75,67 @@
 			"<rootDir>/src/**/*.spec.js"
 		]
 	},
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json",
-            "dist",
-            "package-lock.json"
-          ],
-          "message": "chore(release): Release ${nextRelease.version} - <%=new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' })%>\n\n${nextRelease.notes}"
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            {
-              "path": "CHANGELOG.md",
-              "label": "Changelog"
-            },
-            {
-              "path": "package.json",
-              "label": "Package"
-            }
-          ]
-        }
-      ]
-    ],
-    "fail": false,
-    "success": false,
-    "branches": [
-      "master",
-      {
-        "name": "develop",
-        "prerelease": true
-      }
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": "conventional-commit-types",
-      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
-    }
-  }
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"@semantic-release/changelog",
+				{
+					"changelogFile": "CHANGELOG.md"
+				}
+			],
+			[
+				"@semantic-release/npm",
+				{
+					"npmPublish": false
+				}
+			],
+			[
+				"@semantic-release/git",
+				{
+					"assets": [
+						"CHANGELOG.md",
+						"package.json",
+						"dist",
+						"package-lock.json"
+					],
+					"message": "chore(release): Release ${nextRelease.version} - <%=new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' })%>\n\n${nextRelease.notes}"
+				}
+			],
+			[
+				"@semantic-release/github",
+				{
+					"assets": [
+						{
+							"path": "CHANGELOG.md",
+							"label": "Changelog"
+						},
+						{
+							"path": "package.json",
+							"label": "Package"
+						}
+					]
+				}
+			]
+		],
+		"fail": false,
+		"success": false,
+		"branches": [
+			"master",
+			{
+				"name": "develop",
+				"prerelease": true
+			}
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		},
+		"validate-commit-msg": {
+			"types": "conventional-commit-types",
+			"helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+		}
+	}
 }

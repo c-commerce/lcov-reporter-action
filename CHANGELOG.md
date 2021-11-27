@@ -1,0 +1,8 @@
+## [0.2.22](https://github.com/c-commerce/lcov-reporter-action/compare/v0.2.21...v0.2.22) (2021-11-27)
+
+
+### Bug Fixes
+
+* **api:** unrequire gh token ([d863eb7](https://github.com/c-commerce/lcov-reporter-action/commit/d863eb7faf16c9cac75fda021cb1992f3c1883c4))
+* **ci:** add dist to tag ([0dd2db2](https://github.com/c-commerce/lcov-reporter-action/commit/0dd2db260c3aaee95a52e62f3b83b4141ef4c480))
+* **ci:** add gh token to release ([76029da](https://github.com/c-commerce/lcov-reporter-action/commit/76029dac79848e35db647250e86ce8ac66b42e84))
