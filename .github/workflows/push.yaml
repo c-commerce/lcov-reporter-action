@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    timeout-minutes: 10
     name: Create Release
     runs-on: ubuntu-latest
     steps:
