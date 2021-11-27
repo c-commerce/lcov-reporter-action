@@ -1,0 +1,50 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:require-path-exists/recommended",
+    "plugin:import/recommended",
+    "plugin:node/recommended",
+    "standard"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "requireConfigFile": false
+  },
+  "plugins": [
+    "@babel/eslint-plugin",
+    "import",
+    "promise",
+    "require-path-exists",
+    "no-only-tests"
+  ],
+  "root": true,
+  "rules": {
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "padded-blocks": [
+      "error",
+      "never"
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "consistent": true
+      }
+    ],
+    "no-only-tests/no-only-tests": "error",
+    "node/no-unpublished-require": "off",
+    "node/no-extraneous-require": "off",
+    "array-callback-return": "off",
+    "import/order": [
+      "error", {
+
+      }
+    ]
+  }
+}

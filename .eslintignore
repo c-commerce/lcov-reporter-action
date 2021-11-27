@@ -1,0 +1,9 @@
+node_modules
+lib/handlers/engagements/filemanager/vendor
+design
+apps/
+migrations/
+packages/stream-viewer
+dist
+*.sql
+/**/*.d.ts
