@@ -1,3 +1,10 @@
+## [0.4.3](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.2...v0.4.3) (2021-11-27)
+
+
+### Bug Fixes
+
+* make consumable top level ([25bfc29](https://github.com/c-commerce/lcov-reporter-action/commit/25bfc296cd996fccd795e2c50adf37c9a6407192))
+
 ## [0.4.2](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.1...v0.4.2) (2021-11-27)
 
 
