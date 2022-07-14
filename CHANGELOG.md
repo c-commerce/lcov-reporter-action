@@ -1,3 +1,11 @@
+## [0.4.5](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.4...v0.4.5) (2022-07-14)
+
+
+### Bug Fixes
+
+* **ci:** force install ([b14ad79](https://github.com/c-commerce/lcov-reporter-action/commit/b14ad795e3e627a6d9b7f19172eb9b45adee6ba3))
+* ref cjs correctly ([23d8d43](https://github.com/c-commerce/lcov-reporter-action/commit/23d8d431b50029efdfa3898cf2ff14d02be43711))
+
 ## [0.4.4](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.3...v0.4.4) (2021-11-27)
 
 
