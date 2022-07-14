@@ -21,4 +21,4 @@ inputs:
     default: 'changed'
 runs:
   using: node12
-  main: dist/main.js
+  main: dist/main.cjs
