@@ -1,3 +1,10 @@
+## [0.4.7](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.6...v0.4.7) (2022-07-14)
+
+
+### Bug Fixes
+
+* **action:** reference correct cjs file ([a935076](https://github.com/c-commerce/lcov-reporter-action/commit/a93507617acb5320c2afeedc7aacfdb1df3a7c34))
+
 ## [0.4.6](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.5...v0.4.6) (2022-07-14)
 
 
