@@ -8,7 +8,7 @@ import externals from 'rollup-plugin-node-externals'
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/main.js',
+    file: 'dist/main.cjs',
     format: 'cjs'
   },
   treeshake: true,
@@ -21,7 +21,7 @@ export default {
       preferBuiltins: true,
       mainFields: ['main']
     }),
-    commonjs(),
+    commonjs({}),
     json()
   ]
 }

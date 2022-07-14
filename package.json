@@ -8,7 +8,7 @@
   "type": "module",
   "exports": {
     "import": "./src/index.js",
-    "require": "./dist/main.js"
+    "require": "./dist/main.cjs"
   },
   "keywords": [
     "actions",
@@ -42,9 +42,9 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
     "@istanbuljs/nyc-config-babel": "^3.0.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
@@ -66,8 +66,8 @@
     "eslint-plugin-require-path-exists": "^1.1.9",
     "jest": "^25.1.0",
     "regenerator-runtime": "^0.13.3",
-    "rollup": "^2.60.1",
-    "rollup-plugin-node-externals": "^2.2.0",
+    "rollup": "^2.76.0",
+    "rollup-plugin-node-externals": "^4.1.1",
     "semantic-release": "^18.0.0",
     "commitizen": "^4.2.3",
     "conventional-changelog-cli": "^2.1.1",
