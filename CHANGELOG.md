@@ -1,3 +1,10 @@
+## [0.4.6](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.5...v0.4.6) (2022-07-14)
+
+
+### Bug Fixes
+
+* **pkg:** ref main correctly ([f90f1c4](https://github.com/c-commerce/lcov-reporter-action/commit/f90f1c46dc346b673418f026b98d70529e2a4be8))
+
 ## [0.4.5](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.4...v0.4.5) (2022-07-14)
 
 
