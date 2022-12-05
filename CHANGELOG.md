@@ -1,3 +1,10 @@
+## [0.4.8](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.7...v0.4.8) (2022-12-05)
+
+
+### Bug Fixes
+
+* **runtime:** move to node 16, after deprecation ([4cf681b](https://github.com/c-commerce/lcov-reporter-action/commit/4cf681bf9680e541bdc219330a3dc7ee533d3a6e))
+
 ## [0.4.7](https://github.com/c-commerce/lcov-reporter-action/compare/v0.4.6...v0.4.7) (2022-07-14)
 
 
