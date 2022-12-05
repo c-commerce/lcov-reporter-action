@@ -20,5 +20,5 @@ inputs:
     required: false
     default: 'changed'
 runs:
-  using: node12
+  using: node16
   main: dist/main.cjs
